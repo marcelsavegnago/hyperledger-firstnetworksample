@@ -1,6 +1,6 @@
-# My First Hyperledger Network - Commodity Trading network
+# My First Hyperledger Network 
 
-Este exemplo foi desenvolvido utilizando exemplo disponivel no site do Hyperledger
+A Commodity Trading network
 
 ## Getting Started
 
@@ -56,9 +56,9 @@ cd ..
 composer-rest-server
 ```
 
-## Authors
+## Author
 
-* **Marcel SAvegnago** - *Initial work*
+* **Marcel Savegnago** - *Initial work*
 
 See my github profile (https://github.com/marcelsavegnago)
 
