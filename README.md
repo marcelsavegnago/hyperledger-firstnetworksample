@@ -1,8 +1,14 @@
-# My Commodity Trading network
+# My First Hyperledger Network - Commodity Trading network
 
+Este exemplo foi desenvolvido utilizando exemplo disponivel no site do Hyperledger
 
-## Exporta variavel responsavel por determinar o modo de autenticação
+## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Exportando variável responsável por determinar o modo de autenticação utilizado pela rede.
+
+```
 export COMPOSER_PROVIDERS='{
   "github": {
     "provider": "github",
@@ -15,9 +21,44 @@ export COMPOSER_PROVIDERS='{
     "failureRedirect": "/"
   }
 }'
+```
 
+### Instalando dependências
 
+```
+cd hyperledger-firstnetworksample
+npm install
+```
 
-'''
+### Re-generate your Business Network archive (BNA)
+
+```
+composer archive create --sourceType dir --sourceName . -a ./dist/my-network.bna
+```
+
+### Executando teste unitário
+
+```
+npm test
+```
+
+### Deploy the updated Business Network Definition to the runtime Fabric
+
+```
+cd ./dist
 composer-rest-server -p hlfv1 -n my-network -i admin -s adminpw -a true
-'''
+```
+
+### Regenerate the REST APIs for the updated Business Network
+
+```
+cd ..
+composer-rest-server
+```
+
+## Authors
+
+* **Marcel SAvegnago** - *Initial work*
+
+See my github profile (https://github.com/marcelsavegnago)
+
