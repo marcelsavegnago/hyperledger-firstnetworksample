@@ -50,19 +50,18 @@ composer archive create --sourceType dir --sourceName . -a ./dist/my-network.bna
 npm test
 ```
 
-### Deploy the updated Business Network Definition to the runtime Fabric
+### Deploy the Business Network Definition to the runtime Fabric
 
 ```
 cd ./dist
 composer network deploy -a my-network.bna -p hlfv1 -i PeerAdmin -s randomString
-composer-rest-server -p hlfv1 -n my-network -i admin -s adminpw -a true
 ```
 
-### Regenerate the REST APIs for the updated Business Network
+### Generate the REST APIs for the updated Business Network
 
 ```
 cd ..
-composer-rest-server
+composer-rest-server -p hlfv1 -n my-network -i admin -s adminpw -a true
 ```
 
 ## Author
