@@ -3,9 +3,15 @@
 A Commodity Trading network
 https://hyperledger.github.io/composer/introduction/introduction.html
 
-## Getting Started
+## Preparando o ambiente
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Installing the pre-requisites for Hyperledger Composer on Mac OS X
+
+https://hyperledger.github.io/composer/installing/prereqs-mac.html
+
+Installing and developing with Hyperledger Composer
+
+https://hyperledger.github.io/composer/installing/development-tools.html
 
 ### Exportando variável responsável por determinar o modo de autenticação utilizado pela rede.
 
@@ -29,6 +35,7 @@ export COMPOSER_PROVIDERS='{
 ```
 cd hyperledger-firstnetworksample
 npm install
+npm install -g passport-github
 ```
 
 ### Re-generate your Business Network archive (BNA)
@@ -47,6 +54,7 @@ npm test
 
 ```
 cd ./dist
+composer network deploy -a my-network.bna -p hlfv1 -i PeerAdmin -s randomString
 composer-rest-server -p hlfv1 -n my-network -i admin -s adminpw -a true
 ```
 
