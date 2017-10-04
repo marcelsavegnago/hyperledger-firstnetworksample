@@ -1,4 +1,4 @@
-# My First Hyperledger Network 
+# My First Hyperledger Network
 
 A Commodity Trading network
 https://hyperledger.github.io/composer/introduction/introduction.html
